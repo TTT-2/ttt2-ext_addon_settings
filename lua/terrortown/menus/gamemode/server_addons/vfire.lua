@@ -1,25 +1,10 @@
 -- server config support for vFire: https://steamcommunity.com/sharedfiles/filedetails/?id=1525218777
 
 CLGAMEMODESUBMENU.base = "base_gamemodesubmenu"
-
-CLGAMEMODESUBMENU.priority = 100
 CLGAMEMODESUBMENU.title = "submenu_server_addons_vfire_title"
---CLGAMEMODESUBMENU.icon = Material("vgui/ttt/vskin/helpscreen/accessibility")
 
 function CLGAMEMODESUBMENU:Populate(parent)
     local form = vgui.CreateTTT2Form(parent, "header_vfire_settings")
-
-    form:MakeHelp({
-        label = "help_vfire_spread_boost",
-    })
-
-    form:MakeSlider({
-        label = "label_vfire_spread_boost",
-        serverConvar = "vfire_spread_boost",
-        min = 0,
-        max = 10,
-        decimal = 0,
-    })
 
     local enbDamage = form:MakeCheckBox({
         label = "label_vfire_enable_damage",
@@ -68,12 +53,18 @@ function CLGAMEMODESUBMENU:Populate(parent)
         master = enbDecal,
     })
 
-    local enbSpread = form:MakeCheckBox({
+    local form2 = vgui.CreateTTT2Form(parent, "header_vfire_spread")
+
+    form2:MakeHelp({
+        label = "help_vfire_spread",
+    })
+
+    local enbSpread = form2:MakeCheckBox({
         label = "label_vfire_enable_spread",
         serverConvar = "vfire_enable_spread",
     })
 
-    form:MakeSlider({
+    form2:MakeSlider({
         label = "label_vfire_spread_delay",
         serverConvar = "vfire_spread_delay",
         min = 0,
@@ -82,7 +73,16 @@ function CLGAMEMODESUBMENU:Populate(parent)
         master = enbSpread,
     })
 
-    form:MakeSlider({
+    form2:MakeSlider({
+        label = "label_vfire_spread_boost",
+        serverConvar = "vfire_spread_boost",
+        min = 0,
+        max = 10,
+        decimal = 0,
+        master = enbSpread,
+    })
+
+    form2:MakeSlider({
         label = "label_vfire_decay_rate",
         serverConvar = "vfire_decay_rate",
         min = 0,
@@ -90,7 +90,9 @@ function CLGAMEMODESUBMENU:Populate(parent)
         decimal = 1,
     })
 
-    form:MakeCheckBox({
+    local form3 = vgui.CreateTTT2Form(parent, "header_vfire_other")
+
+    form3:MakeCheckBox({
         label = "label_vfire_affect_npcs",
         serverConvar = "vfire_affect_npcs",
     })
