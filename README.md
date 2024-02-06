@@ -5,3 +5,6 @@ This addon adds F1 settings for external addons where it doesn't make sense to a
 ## Currently Supported Addons
 
 1. [vFire](https://steamcommunity.com/sharedfiles/filedetails/?id=1525218777)
+1. [Flyby Sounds](https://steamcommunity.com/sharedfiles/filedetails/?id=167809847) and <br>
+   [Flyby Sounds Fixed](https://steamcommunity.com/sharedfiles/filedetails/?id=3050439982)
+1. [Flyby Shake](https://steamcommunity.com/sharedfiles/filedetails/?id=3049449608)

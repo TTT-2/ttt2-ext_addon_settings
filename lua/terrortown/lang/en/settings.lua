@@ -2,10 +2,15 @@ local L = LANG.GetLanguageTableReference("en")
 
 L["submenu_server_addons_vfire_title"] = "vFire"
 L["submenu_addons_vfire_title"] = "vFire"
+L["submenu_server_addons_flybyshake_title"] = "Flyby Shake"
+L["submenu_addons_flybyshake_title"] = "Flyby Shake"
+L["submenu_server_addons_flybysounds_title"] = "Flyby Sounds"
 
 L["header_vfire_settings"] = "General vFire Settings"
 L["header_vfire_spread"] = "vFire Spread Settings"
 L["header_vfire_other"] = "Other vFire Settings"
+L["header_flybysounds_settings"] = "Flyby Sounds Settings"
+L["header_flybyshake_settings"] = "Flyby Shake Settings"
 
 L["button_vfire_remove_all"] = "Remove active fires"
 
@@ -16,7 +21,7 @@ L["label_vfire_damage_multiplier"] = "vFire damage multiplier"
 L["label_vfire_enable_explosion_fires"] = "Enable explosions creating vFire"
 L["label_vfire_enable_explosion_effects"] = "Exnable explosion effects"
 L["label_vfire_enable_decals"] = "Enable vFire char decals"
-L["label_vfire_decal_probability"] = "Char decal chance"
+L["label_vfire_decal_probability"] = "Char decal spawn chance"
 L["label_vfire_enable_spread"] = "Enable vFire spread"
 L["label_vfire_spread_delay"] = "Spread delay in seconds"
 L["label_vfire_decay_rate"] = "vFire decay rate"
@@ -33,3 +38,23 @@ L["label_vfire_enable_lights"] = "Enable vFire light effects (huge performance i
 L["label_vfire_light_brightness"] = "Brightness multiplier"
 
 L["help_vfire_admin_settings"] = "Note: These are only the client side performance settings of vFire. To change the look and feel of vFire, head over to the server-addons sections of this menu"
+
+L["label_sv_flybysound_minvol"] = "Minimum entity volume"
+L["label_sv_flybysound_minspeed"] = "Speed lower bound"
+L["label_sv_flybysound_maxspeed"] = "Speed upper bound"
+L["label_sv_flybysound_minshapevolume"] = "Volume lower bound"
+L["label_sv_flybysound_maxshapevolume"] = "Volume upper bound"
+L["label_sv_flybysound_playersounds"] = "Players can trigger sound as well"
+
+L["help_flybysound_minvolume"] = "Entities below the minimum volume do not create a sound at all."
+L["help_flybysound_speed"] = "The upper and lower speed bounds for entities to in-/decrease the volume of the sound. Below the minimum speed it is inaudible."
+L["help_flybysound_volume"] = "The upper and lower volume bounds for entities to in-/decrease the pitch of the sound."
+
+L["label_sv_shakeflyby_turnoffinvehicle"] = "Disable shake if in vehicle"
+L["label_shakeflyby_distance"] = "Maximum distance to trigger shake"
+L["label_shakeflyby_intensity"] = "Shake intensity"
+L["label_shakeflyby_time"] = "Shake duration"
+L["label_shakeflyby_turnoffinvehicle"] = "Disable shake if in vehicle"
+L["shakeflyby_debug"] = "Enable debug output"
+
+L["help_shakeflyby_turnoffinvehicle"] = "Turning off the flyby shake in vehicles on the server, disables the corresponding client convar and removes it from the UI."
