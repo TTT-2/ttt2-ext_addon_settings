@@ -26,9 +26,10 @@ L["help_vfire_spread"] = "vFire particles have a chance to spread that increases
 
 L["label_vfire_lod"] = "Level of detail (LOD)"
 L["choice_vfire_lod_0"] = "Disable all vFire LODs"
-L["choice_vfire_lod_0"] = "Automatic vFire LODs"
-L["choice_vfire_lod_0"] = "Force vFire LODs on"
+L["choice_vfire_lod_1"] = "Automatic vFire LODs"
+L["choice_vfire_lod_2"] = "Force vFire LODs on"
 L["label_vfire_enable_glows"] = "Enable vFire glow effects"
 L["label_vfire_enable_lights"] = "Enable vFire light effects (huge performance impact)"
+L["label_vfire_light_brightness"] = "Brightness multiplier"
 
 L["help_vfire_admin_settings"] = "Note: These are only the client side performance settings of vFire. To change the look and feel of vFire, head over to the server-addons sections of this menu"
