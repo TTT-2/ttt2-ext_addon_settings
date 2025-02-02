@@ -1,4 +1,4 @@
--- server config support for Flyby Sounds (fixed): https://steamcommunity.com/sharedfiles/filedetails/?id=3050439982
+-- server config support for Fly By Sounds: https://steamcommunity.com/sharedfiles/filedetails/?id=167809847
 
 CLGAMEMODESUBMENU.base = "base_gamemodesubmenu"
 CLGAMEMODESUBMENU.title = "submenu_server_addons_flybysounds_title"
@@ -62,8 +62,13 @@ function CLGAMEMODESUBMENU:Populate(parent)
         label = "label_sv_flybysound_playersounds",
         serverConvar = "sv_flybysound_playersounds",
     })
+
+    form:MakeCheckBox({
+        label = "label_sv_flybysound_spinsounds",
+        serverConvar = "sv_flybysound_spinsounds",
+    })
 end
 
 function CLGAMEMODESUBMENU:ShouldShow()
-    return ConVarExists("sv_flybysound_playersounds")
+    return ConVarExists("sv_flybysound_spinsounds")
 end
