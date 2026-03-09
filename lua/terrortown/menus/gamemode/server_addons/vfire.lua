@@ -119,10 +119,6 @@ function CLGAMEMODESUBMENU:PopulateButtonPanel(parent)
     buttonEditor:SetPos(parent:GetWide() - 220, 20)
     buttonEditor.DoClick = function(btn)
         RunConsoleCommand("vfire_remove_all")
-
-        timer.Simple(0, function()
-            vguihandler.Rebuild()
-        end)
     end
 end
 
