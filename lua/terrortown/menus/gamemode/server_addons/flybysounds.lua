@@ -70,5 +70,5 @@ function CLGAMEMODESUBMENU:Populate(parent)
 end
 
 function CLGAMEMODESUBMENU:ShouldShow()
-    return ConVarExists("sv_flybysound_spinsounds")
+    return ConVarExists("sv_flybysound_minvol")
 end

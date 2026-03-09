@@ -28,8 +28,8 @@ function CLGAMEMODESUBMENU:Populate(parent)
     })
 
     local enbLight = form:MakeCheckBox({
-        label = "label_vfire_enable_glows",
-        convar = "vfire_enable_glows",
+        label = "label_vfire_enable_lights",
+        convar = "vfire_enable_lights",
         master = enbGlow,
     })
 
@@ -41,6 +41,25 @@ function CLGAMEMODESUBMENU:Populate(parent)
         decimal = 1,
         master = enbLight,
     })
+end
+
+function CLGAMEMODESUBMENU:PopulateButtonPanel(parent)
+    local buttonReset = vgui.Create("DButtonTTT2", parent)
+
+    buttonReset:SetText("button_reset")
+    buttonReset:SetSize(100, 45)
+    buttonReset:SetPos(20, 20)
+    buttonReset.DoClick = function(btn)
+        RunConsoleCommand("vfire_default_visual_settings")
+
+        timer.Simple(0, function()
+            vguihandler.Rebuild()
+        end)
+    end
+end
+
+function CLGAMEMODESUBMENU:HasButtonPanel()
+    return true
 end
 
 function CLGAMEMODESUBMENU:ShouldShow()

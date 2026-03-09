@@ -51,6 +51,7 @@ L["label_cl_flybysound_updatedelay"] = "Sound update interval"
 L["label_cl_flybysound_scandelay"] = "Entity scan interval"
 L["label_cl_flybysound_cutoffdist"] = "Sound cutoff distance"
 L["label_cl_flybysound_altsound"] = "Use alternative wind sound"
+L["label_cl_flybysound_loudness"] = "Overall volume of the sound"
 
 L["help_flybysound_minvolume"] = "Entities below the minimum volume do not create a sound at all."
 L["help_flybysound_speed"] = "The upper and lower speed bounds for entities to in-/decrease the volume of the sound. Below the minimum speed it is inaudible."
