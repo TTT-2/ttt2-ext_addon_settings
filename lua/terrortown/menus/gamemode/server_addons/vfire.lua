@@ -106,6 +106,10 @@ function CLGAMEMODESUBMENU:PopulateButtonPanel(parent)
     buttonReset:SetPos(20, 20)
     buttonReset.DoClick = function(btn)
         RunConsoleCommand("vfire_default_settings")
+
+        timer.Simple(0, function()
+            vguihandler.Rebuild()
+        end)
     end
 
     local buttonEditor = vgui.Create("DButtonTTT2", parent)

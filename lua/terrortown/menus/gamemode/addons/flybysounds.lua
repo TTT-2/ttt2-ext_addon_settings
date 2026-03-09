@@ -34,6 +34,14 @@ function CLGAMEMODESUBMENU:Populate(parent)
         label = "label_cl_flybysound_altsound",
         convar = "cl_flybysound_altsound",
     })
+
+    form:MakeSlider({
+        label = "label_cl_flybysound_loudness",
+        convar = "cl_flybysound_loudness",
+        min = 0,
+        max = 1,
+        decimal = 1,
+    })
 end
 
 function CLGAMEMODESUBMENU:ShouldShow()
